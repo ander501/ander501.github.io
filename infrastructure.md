@@ -14,7 +14,7 @@ MAPS Infrastructure
 flowchart TD
     B[Static Portal] -- Auth0 token --> C[Python Middleware]
     C --> A[Auth0]
-    C &lt;--> E[Stripe]
+    C <--> E[Stripe]
     E --> A
     C --> D[Entitlement Services]
     B -- Streaming URL --> F[Appstream]
@@ -23,7 +23,7 @@ flowchart TD
     G[User Assignment] --> A
     D --> A
     H((OCP/KYC)) -...-> G
-    I &lt;--> J[MT5]
+    I <--> J[MT5]
 ```
 
 | Component       | Description             | UAT Environment  | Production Environment |
